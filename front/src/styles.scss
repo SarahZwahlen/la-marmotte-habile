@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&family=Nothing+You+Could+Do&display=swap');
+ 
+$brand-font : 'Nothing You Could Do', cursive;
+  
+:root {
+    font-family:  'Montserrat', sans-serif;
+}
+
+
+h1{
+    font-family:$brand-font
+}
