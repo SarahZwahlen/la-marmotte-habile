@@ -8,7 +8,7 @@ const routes: RouteObject[] = [
     element: <Layout />,
     children: [
       {
-        path: "",
+        path: "/home",
         element: <Home />,
       },
     ],
@@ -17,4 +17,4 @@ const routes: RouteObject[] = [
 
 const router = createBrowserRouter(routes);
 
-export default routes;
+export default router;
