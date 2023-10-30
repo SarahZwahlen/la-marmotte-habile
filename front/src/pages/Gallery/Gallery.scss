@@ -1,0 +1,23 @@
+@use "../../styles.scss" as global;
+
+h1{
+    font-family: 'Nothing You Could Do', cursive
+}
+
+.galery{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap : 1rem;
+
+}
+
+
+@media screen and (min-width:global.$bp-max-mobile) {
+    .galery{
+
+    }
+
+}
+
