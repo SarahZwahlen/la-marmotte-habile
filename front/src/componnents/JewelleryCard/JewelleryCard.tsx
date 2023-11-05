@@ -7,10 +7,13 @@ interface JewelCardProps {
 }
 const JewelleryCard: React.FC<JewelCardProps> = ({ jewel }): JSX.Element => {
   return (
-    <Link to={`/jewelry/${jewel.id}`} className="jewelry-card">
-      <img src={serpentine} className="jewelry-picture" />
+    <div className="jewelry-card">
+      <Link to={`/jewelry/${jewel.id}`}>
+        <img src={serpentine} className="jewelry-picture" />
+        {/* <h3>{jewel.name}</h3> */}
+      </Link>
       <h3>{jewel.name}</h3>
-    </Link>
+    </div>
   );
 };
 
