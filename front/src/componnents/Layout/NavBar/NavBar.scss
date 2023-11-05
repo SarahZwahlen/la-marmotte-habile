@@ -18,7 +18,11 @@
             
             a{
                 text-decoration: none;
-                color : black
+                color : black;
+
+                &:hover{
+                    color : global.$main-red-500
+                }
             }
 
             &:hover{
