@@ -1,8 +1,8 @@
 import cors from 'cors';
 import express from 'express';
-import session from 'express-session';
 import * as dotenv from 'dotenv';
 import router from './router';
+import session from 'express-session';
 
 dotenv.config();
 
@@ -33,7 +33,6 @@ app.use(
         optionsSuccessStatus: 200
     })
 );
-
 
 app.use('/', router);
 app.listen(process.env.PORT_BACKEND, () =>
