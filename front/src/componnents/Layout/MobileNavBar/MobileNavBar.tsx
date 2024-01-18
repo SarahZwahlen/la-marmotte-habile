@@ -4,6 +4,7 @@ import "./MobileNavBar.scss";
 const MobileNavBar = () => {
   return (
     <nav className="nav-mobile">
+      <Link to={"/"}>Accueil</Link>
       <Link to={"/products"}>Tous les produits</Link>
       <Link to={"/about"}>La Marmotte Habile</Link>
       <Link to={"/"}>Bijoux</Link>
