@@ -1,0 +1,21 @@
+@use "../../../styles.scss" as global;
+
+.modal-layout{
+    background-color: rgba(0, 0, 0, 0.171);
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content{
+    background-color: global.$color-background;
+    width: 90vw;
+    height: 90vh;
+    padding: 1rem;
+    border-radius: 10px;
+}
