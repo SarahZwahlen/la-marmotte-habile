@@ -1,0 +1,27 @@
+@use "../../../styles.scss" as global;
+
+.nav-mobile{
+    position: absolute;
+    z-index: 2;
+    background-color: global.$color-primary-base;
+    top : global.$nav-bar-height; 
+    left: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 10px;
+    padding : 1rem 0rem;
+
+    a{
+        color : global.$color-background;
+        text-decoration: none;
+        padding : 0.5rem 1rem ;
+        transition : 0.2s;
+
+        &:hover{
+            background-color: global.$color-primary-light;
+        }
+    }
+}
+
