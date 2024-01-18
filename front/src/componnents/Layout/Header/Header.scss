@@ -9,6 +9,10 @@ header{
     position : relative;
     padding : 1rem;
 
+    a{
+        text-decoration: none;
+    }
+
     h1{
         color : global.$color-primary-base
     }
