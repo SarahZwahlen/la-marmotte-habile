@@ -110,10 +110,7 @@ button{
     font-size : 1.5rem;
 }
 
-
-.button-primary{
-    background-color:$color-primary-base ;
-    color : $color-background;
+@mixin button-base{
     text-decoration: none;
     padding: 1rem;
     border-radius: 50px;
@@ -121,5 +118,18 @@ button{
     gap : 1rem;
     justify-content: center;
     align-items: center;
-    border: none;
+}
+
+.button-primary{
+    @include button-base;
+    background-color:$color-primary-base ;
+    color : $color-background;
+    border: 1px transparent;
+}
+
+.button-secondary{
+    @include button-base;
+    background-color:$color-background ;
+    color : $color-primary-base;
+    border : 1px solid $color-primary-base;
 }
