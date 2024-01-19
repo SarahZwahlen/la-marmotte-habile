@@ -9,9 +9,9 @@ const Home = () => {
   const images = [cornaplume, serpentine];
 
   return (
-    <main>
+    <>
       <section className="home-carrousel">
-        <Carousel images={images} carouselDelay={4000} />
+        <Carousel images={images} carouselDelay={4000} isDiapo={true} />
         <Link to="products" className="button-primary home-button-all-products">
           <IconSolid iconName="chevron-right" />
           Voir tous les produits
@@ -41,7 +41,7 @@ const Home = () => {
           </Link>
         </article>
       </section>
-    </main>
+    </>
   );
 };
 

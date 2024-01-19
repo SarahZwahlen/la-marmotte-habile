@@ -4,17 +4,20 @@ import "./Carousel.scss";
 
 interface CarouselProps {
   images: string[];
-  carouselDelay: number;
+  carouselDelay: number | null;
+  isDiapo: boolean;
 }
 
 const Carousel = (props: CarouselProps) => {
   const [imageIndex, setImageIndex] = useState<number>(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      nextImage();
-    }, props.carouselDelay);
-    return () => clearInterval(interval);
+    if (props.isDiapo && props.carouselDelay) {
+      const interval = setInterval(() => {
+        nextImage();
+      }, props.carouselDelay);
+      return () => clearInterval(interval);
+    }
   }, [imageIndex]);
 
   const nextImage = () => {
