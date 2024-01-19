@@ -1,0 +1,21 @@
+@use "../../../styles.scss" as global;
+
+@mixin capsule {
+    border-radius: 20px;
+    padding: 0.25rem 1rem;
+    width: fit-content;
+    font-size: 0.8rem;
+
+}
+
+.in-stock {
+    @include capsule;
+    color: #497D48;
+    background-color : #BFECBE;
+}
+
+.out-of-stock{
+    @include capsule();
+    color : #824937;
+    background-color: #ECC6BE;
+}
