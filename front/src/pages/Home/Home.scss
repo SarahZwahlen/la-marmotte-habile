@@ -16,7 +16,8 @@
     align-items: center;
     background-size: cover;
     color : global.$color-text;
-    
+
+
     a{
         text-decoration: none;    
     
@@ -36,28 +37,14 @@
 }
 
 .home-carrousel{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    // position: relative;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
 
-
-    img{
-        width: 100%;
-        border-radius: global.$border-radius;
-    }
 }
 
 .home-button-all-products{
     position: absolute;
     bottom: 1rem;
-}
-
-.carrousel-nav-buttons{
-    position: absolute;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
 }

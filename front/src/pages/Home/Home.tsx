@@ -1,21 +1,17 @@
 import { Link } from "react-router-dom";
 import "./Home.scss";
 import serpentine from "../../assets/serpentine.jpg";
+import cornaplume from "../../assets/earing_cornaplume.jpg";
 import IconSolid from "../../componnents/Shared/icon";
+import Carousel from "../../componnents/Shared/carousels/Carousel";
 
 const Home = () => {
+  const images = [cornaplume, serpentine];
+
   return (
     <main>
       <section className="home-carrousel">
-        <img src={serpentine} />
-        <div className="carrousel-nav-buttons">
-          <button className="button-icon">
-            <IconSolid iconName="chevron-left" />
-          </button>
-          <button className="button-icon">
-            <IconSolid iconName="chevron-right" />
-          </button>
-        </div>
+        <Carousel images={images} carouselDelay={4000} />
         <Link to="products" className="button-primary home-button-all-products">
           <IconSolid iconName="chevron-right" />
           Voir tous les produits
