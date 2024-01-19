@@ -1,5 +1,15 @@
+import ProductCard from "../../componnents/ProductCard/ProductCard";
+import data from "../../data/data";
+import { Product } from "../../types/product.type";
+
 const Products = () => {
-  return <p>Test products</p>;
+  return (
+    <main>
+      {data.map((product: Product) => (
+        <ProductCard product={product} />
+      ))}
+    </main>
+  );
 };
 
 export default Products;
