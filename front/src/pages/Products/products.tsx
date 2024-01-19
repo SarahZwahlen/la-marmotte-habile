@@ -3,10 +3,11 @@ import data from "../../data/data";
 import { Product } from "../../types/product.type";
 
 const Products = () => {
+  
   return (
     <main>
       {data.map((product: Product) => (
-        <ProductCard product={product} />
+        <ProductCard key={product.id} product={product} />
       ))}
     </main>
   );
