@@ -11,7 +11,7 @@ const ProductCard = (props: ProductInterface) => {
   return (
     <div className="product-card">
       <img
-        src={`http://localhost:3100/${props.product.thumbnail}`}
+        src={`${process.env.REACT_APP_BACK_LOCAL_URL}/${props.product.thumbnail}`}
         alt={props.product.name}
       />
       <div className="product-card-data">
