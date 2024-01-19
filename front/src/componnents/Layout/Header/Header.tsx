@@ -8,6 +8,10 @@ import { Link } from "react-router-dom";
 const Header = () => {
   const [isBasketModalOpen, setIsBasketModalOpen] = useState<boolean>(false);
 
+  const openBasketModal = () => {
+    setIsBasketModalOpen(true);
+  };
+
   return (
     <>
       <header>
@@ -15,7 +19,7 @@ const Header = () => {
         <Link to={"/"}>
           <h1 className="brand-name">La Marmotte Habile</h1>
         </Link>
-        <button className="button-icon">
+        <button className="button-icon" onClick={openBasketModal}>
           <BasketIcon />
         </button>
       </header>
@@ -27,6 +31,6 @@ const Header = () => {
       </Modal>
     </>
   );
-};
+};  
 
 export default Header;
