@@ -3,12 +3,13 @@ import express from 'express';
 import * as dotenv from 'dotenv';
 import router from './router';
 import session from 'express-session';
+import path from 'path';
 
 dotenv.config();
 
 const app = express();
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
