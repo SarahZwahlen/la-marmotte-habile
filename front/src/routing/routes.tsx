@@ -4,6 +4,7 @@ import About from "../pages/About/About";
 import Home from "../pages/Home/Home";
 import NotFound from "../pages/NotFound/NotFound";
 import Products from "../pages/Products/products";
+import ProductNotice from "../pages/ProductNotice/ProductNotice";
 
 const routes: RouteObject[] = [
   {
@@ -17,6 +18,10 @@ const routes: RouteObject[] = [
       {
         path: "products",
         element: <Products />,
+      },
+      {
+        path: "product/:id",
+        element: <ProductNotice />,
       },
 
       {
