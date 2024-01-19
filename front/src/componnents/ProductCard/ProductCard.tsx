@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Product } from "../../types/product.type";
-import BasketIcon from "../Shared/icons/basketIcon";
 import "./ProductCard.scss";
+import AddToBasket from "../Shared/addToBasket/addToBasket";
 
 interface ProductInterface {
   product: Product;
@@ -21,10 +21,7 @@ const ProductCard = (props: ProductInterface) => {
         </div>
         <div className="product-card-descrption-basket">
           <p>{props.product.description}</p>
-          <button className="button-primary">
-            <BasketIcon />
-            <p>Ajouter</p>
-          </button>
+          <AddToBasket isShort={true} />
         </div>
       </div>
     </div>

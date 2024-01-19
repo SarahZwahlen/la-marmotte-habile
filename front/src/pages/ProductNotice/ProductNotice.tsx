@@ -48,7 +48,7 @@ const ProductNotice = () => {
             <p>{product.description}</p>
           </div>
           <div className="product-notice-basket">
-            <AddToBasket />
+            <AddToBasket isShort={false} />
           </div>
         </>
       )}
