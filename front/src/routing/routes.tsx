@@ -3,7 +3,7 @@ import Layout from "../componnents/Layout/Layout";
 import About from "../pages/About/About";
 import Home from "../pages/Home/Home";
 import NotFound from "../pages/NotFound/NotFound";
-import Products from "../pages/Products/products";
+import Products from "../pages/Products/Products";
 import ProductNotice from "../pages/ProductNotice/ProductNotice";
 
 const routes: RouteObject[] = [
