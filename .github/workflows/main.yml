@@ -10,3 +10,18 @@ jobs :
     runs-on : ubuntu-latest
     steps : 
       - run : echo "test ok"
+  
+  test-backend : 
+    runs-on : ubuntu-latest
+
+    strategy:
+      matrix :
+        node-version : ['18.x']
+
+    steps : 
+      - uses : action/checkout@v3
+      - name : Use Node.js ${{matrix.node-version}}
+        uses : actions/setup-node@v3
+        with : 
+          node-version : "18.x"
+      - run : npm test -w backend
