@@ -9,4 +9,4 @@ jobs :
   first-test : 
     runs-on : ubuntu-latest
     steps : 
-      - uses : echo "test ok"
+      - run : echo "test ok"
