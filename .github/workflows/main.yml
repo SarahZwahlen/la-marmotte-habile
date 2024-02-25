@@ -6,12 +6,7 @@ on :
   pull_request :
     branches : [main]
 jobs : 
-  first-test : 
-    runs-on : ubuntu-latest
-    steps : 
-      - run : echo "test ok"
-  
-  test-backend : 
+  test-backend-ls : 
     runs-on : ubuntu-latest
 
     strategy:
@@ -25,6 +20,22 @@ jobs :
         with : 
           node-version : "18.x"
       - run : ls
-      - run : cd back
+        run : cd back
+        run : ls
+
+    test-backend : 
+    runs-on : ubuntu-latest
+
+    strategy:
+      matrix :
+        node-version : ['18.x']
+
+    steps : 
+      - uses : actions/checkout@v3
+      - name : Use Node.js ${{matrix.node-version}}
+        uses : actions/setup-node@v3
+        with : 
+          node-version : "18.x"
+      - workind-directory : ./back
       - run : npm install
       - run : npm test
