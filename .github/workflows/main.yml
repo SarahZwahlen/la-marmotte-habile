@@ -36,6 +36,6 @@ jobs :
         uses : actions/setup-node@v3
         with : 
           node-version : "18.x"
-      - workind-directory : ./back
+      - working-directory : ./back
       - run : npm install
       - run : npm test
