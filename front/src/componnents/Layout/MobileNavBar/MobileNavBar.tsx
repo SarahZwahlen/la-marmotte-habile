@@ -1,9 +1,18 @@
 import { Link } from "react-router-dom";
 import "./MobileNavBar.scss";
 
-const MobileNavBar = () => {
+interface MobileNavBarInterface {
+  handleNavIsOpen: (isOpen: boolean) => void;
+}
+
+const MobileNavBar = (props: MobileNavBarInterface) => {
   return (
-    <nav className="nav-mobile">
+    <nav
+      className="nav-mobile"
+      onMouseLeave={() => {
+        props.handleNavIsOpen(false);
+      }}
+    >
       <Link to={"/"}>Accueil</Link>
       <Link to={"/products"}>Tous les produits</Link>
       <Link to={"/about"}>La Marmotte Habile</Link>

@@ -5,12 +5,19 @@ import MobileNavBar from "../Layout/MobileNavBar/MobileNavBar";
 const BurgerMenu = () => {
   const [navIsOpen, setNavIsOpen] = useState<boolean>(false);
 
+  const handleNavOpening = (isOpen: boolean) => {
+    setNavIsOpen(isOpen);
+  };
+
   return (
     <div>
-      <button onClick={() => setNavIsOpen(!navIsOpen)} className="button-icon">
+      <button
+        onClick={() => handleNavOpening(!navIsOpen)}
+        className="button-icon"
+      >
         <BurgerMenuIcon />
       </button>
-      {navIsOpen && <MobileNavBar />}
+      {navIsOpen && <MobileNavBar handleNavIsOpen={handleNavOpening} />}
     </div>
   );
 };
