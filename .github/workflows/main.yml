@@ -19,8 +19,8 @@ jobs :
           node-version : "18.x"
       - uses : actions/checkout@v3
       - run : npm install
-          working-directory : ./back
+        working-directory : ./back
       - run : npm test
-          working-directory : ./back
+        working-directory : ./back
       
 
